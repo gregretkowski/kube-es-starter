@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: master
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: master
+      name: master
+    spec:
+      containers:
+        - name: master
+          image: demokuberegistry.azurecr.io/kubeevo:v1
+          ports:
+            - containerPort: 6379
+              protocol: TCP
+          volumeMounts:
+            - mountPath: "/logdir"
+              name: kubeevologdir
+          command: [ "./master-start.sh" ]
+      volumes:
+        - name: kubeevologdir
+          persistentVolumeClaim:
+            claimName: kubeevologdir

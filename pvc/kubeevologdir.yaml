@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kubeevologdir
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: kubeevologdir
+  resources:
+    requests:
+      storage: 5Gi
