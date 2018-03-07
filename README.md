@@ -1,6 +1,7 @@
 
-This is the Docker & Kubernetes config that accompanies my blog post
-on *Deploying ML workloads with Azure and Kubernetes* *Link coming soon*
+This is the Docker & Kubernetes config that accompanies my blog post [Deploying ML workloads with Azure and Kubernetes](http://www.rage.net/~greg/2018-03-05-kube-azure-es-roboschool.html).
+
+This uses the [Evolution Strategies](https://github.com/openai/evolution-strategies-starter) starter and [Roboschool](https://github.com/openai/roboschool).
 
 ![Humaniod Learning Task](humanoid.jpg?raw=true)
 
